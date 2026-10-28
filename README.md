@@ -16,7 +16,7 @@ npm run build
 npm run preview
 ```
 
-推送到 GitHub 的 `main` 分支后，`.github/workflows/deploy-pages.yml` 会自动构建并发布到 GitHub Pages。
+运行 `npm run build` 并提交更新后的 `dist` 后，推送到 GitHub 的 `main` 分支会由 `.github/workflows/deploy-pages.yml` 自动发布到 GitHub Pages。
 
 ## iOS
 
