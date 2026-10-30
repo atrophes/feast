@@ -1,0 +1,351 @@
+.v2 { min-height: 0; overflow: auto; background: #f2ecdf; }
+.v2 .topbar { position: sticky; top: 0; height: 72px; grid-template-columns: 240px 1fr auto; gap: 16px; }
+.v2 .brand-lockup { padding: 0; color: #fff6df; background: none; text-align: left; }
+.header-location { display: flex; flex-direction: column; gap: 3px; padding-left: 18px; border-left: 1px solid #61564b; }
+.header-location span { color: #baac9c; font-size: 10px; }
+.header-location b { font-size: 13px; font-weight: 600; }
+.player-button { height: 36px; display: flex; align-items: center; gap: 7px; padding: 0 12px; background: #51453b; color: #fff5df; border: 1px solid #796450; border-radius: 5px; font-size: 11px; }
+.lobby { max-width: 1400px; margin: 0 auto; padding: 32px 38px 24px; }
+.lobby-intro { position: relative; min-height: 160px; display: flex; align-items: center; justify-content: space-between; padding: 0 32px 18px 6px; overflow: hidden; }
+.lobby-intro h1 { margin: 8px 0 10px; font-size: clamp(26px, 3.3vw, 42px); font-weight: 900; color: #37281f; }
+.lobby-intro p:not(.eyebrow) { font-size: 12px; color: #88705d; margin: 0; }
+.lobby-burger { position: relative; width: 230px; height: 155px; display: flex; align-items: center; justify-content: center; background: #edc268; border-radius: 48% 52% 44% 55%; }
+.lobby-burger .burger-visual { transform: scale(.66) rotate(-6deg); margin-top: -14px; }
+.lobby-burger > span { position: absolute; bottom: 6px; right: 2px; padding: 6px 12px; color: #fff4dc; background: #bb3a2b; font-size: 8px; font-weight: 900; transform: rotate(-5deg); }
+.lobby-summary { display: flex; align-items: center; gap: 24px; padding: 14px 0; border-top: 1px solid #d8cdbd; border-bottom: 1px solid #d8cdbd; font-size: 11px; color: #6b594b; }
+.lobby-summary > span, .lobby-summary > button { display: flex; align-items: center; gap: 7px; }
+.lobby-summary > span svg { color: #c88b28; }
+.lobby-summary button { padding: 0; background: none; }
+.lobby-summary .sync-state { margin-left: auto; font-size: 9px; max-width: 280px; text-align: left; }
+.sync-state.connected { color: #3f7f3a; }
+.campaign-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; padding-top: 24px; }
+.chapter { margin-bottom: 24px; }
+.chapter-title { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+.chapter-title > span { font-size: 9px; color: #b3452d; font-weight: 800; }
+.chapter-title h2 { font-size: 19px; margin: 0; }
+.chapter-title > small { font-size: 10px; color: #95806c; margin-left: auto; }
+.level-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.level-card { position: relative; min-height: 137px; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; padding: 13px; text-align: left; background: #fffaf0; border: 1px solid #dfd2be; border-bottom: 4px solid #cebea5; border-radius: 7px; transition: transform .12s, border-color .12s; }
+.level-card:hover:not(:disabled) { transform: translateY(-3px); }
+.level-card.is-active { background: #fff4d8; border-color: #c94b32; }
+.level-card.is-locked { opacity: .55; background: #e8e0d2; }
+.level-number { color: #b9452e; font-size: 23px; font-weight: 900; line-height: 1.15; }
+.level-card > strong { font-size: 12px; }
+.level-card > small { color: #8b7764; font-size: 9px; }
+.stars { display: inline-flex; align-items: center; gap: 3px; color: #d4c6b4; }
+.stars .lit { color: #db9826; }
+.level-card > .stars { margin-top: auto; padding-top: 6px; }
+.level-detail { position: sticky; top: 96px; align-self: start; padding: 24px 20px; background: #322a24; color: #fff2d9; border-radius: 8px; border-top: 5px solid #d35032; }
+.level-detail h2 { margin: 8px 0 12px; font-size: 25px; }
+.level-detail > p { font-size: 11px; line-height: 1.9; color: #c9b69d; }
+.level-detail .eyebrow { color: #f3b953; }
+.goal-list { margin: 16px 0; display: flex; flex-direction: column; gap: 12px; font-size: 11px; }
+.goal-list span { display: flex; gap: 8px; align-items: center; }
+.goal-list svg { width: 15px; height: 15px; color: #e6b555; }
+.detail-tip { padding: 12px; background: #e5b34b20; border-left: 2px solid #d99a2b; font-size: 11px; line-height: 1.8; color: #846638; text-align: left; }
+.level-detail .primary-button { font-size: 12px; margin-top: 22px; min-height: 46px; }
+.lobby-footnote { text-align: center; font-size: 10px; color: #96816d; }
+.resume-banner { margin-top: 18px; padding: 13px 17px; display: flex; align-items: center; justify-content: space-between; background: #e3ebd8; border: 1px solid #acbd93; border-radius: 5px; color: #425d30; }
+.resume-banner > div { display: flex; gap: 12px; align-items: center; }
+.resume-banner b { display: block; font-size: 12px; }
+.resume-banner span { display: block; font-size: 10px; margin-top: 3px; }
+.resume-banner button { display: flex; gap: 9px; align-items: center; padding: 10px 15px; background: #4c7238; color: #fff; border-radius: 4px; font-size: 11px; }
+.connection-banner { padding: 10px; text-align: center; color: #ae3e29; font-size: 12px; }
+.v2 .game-area { height: calc(100dvh - 72px); min-height: 600px; padding-top: 0; }
+.shift-dashboard { min-height: 64px; display: flex; align-items: center; gap: 25px; padding: 10px 24px; background: #fcf5e9; border-bottom: 1px solid #dacbb3; }
+.shift-dashboard > div:not(.stress-block):not(.time-block) { display: flex; flex-direction: column; gap: 2px; }
+.shift-dashboard b { font-size: 21px; line-height: 1.1; }
+.shift-dashboard b small { color: #a28a71; font-size: 10px; }
+.shift-dashboard > div > span { font-size: 9px; color: #8e7966; }
+.shift-dashboard .time-block { margin-left: auto; display: flex; align-items: center; gap: 7px; font-variant-numeric: tabular-nums; }
+.shift-dashboard .stress-block { width: 150px; margin-left: auto; }
+.stress-block > span { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.stress-block b { font-size: 11px; }
+.meter { height: 7px; display: block; overflow: hidden; border-radius: 4px; background: #ded5c4; }
+.meter > i { display: block; height: 100%; background: #ca5737; transition: width .15s; }
+.red { color: #c03c29; }
+.v2 .order-rail { height: 108px; flex-basis: 108px; padding: 10px 15px; }
+.v2 .rail-label { width: 70px; flex-basis: 70px; }
+.v2 .order-ticket { min-width: 240px; width: 290px; }
+.v2 .ticket-copy { gap: 3px; }
+.v2 .ticket-copy > small { font-size: 8px; color: #9c8370; }
+.ticket-copy strong em, .ticket-copy .order-sides em { padding: 2px 4px; margin-left: 5px; background: #f4d5bd; color: #a32e24; font-size: 8px; font-style: normal; }
+.v2 .ticket-copy .order-sides { font-size: 10px; color: #625344; }
+.v2 .kitchen-grid { grid-template-columns: minmax(150px, .7fr) minmax(290px, 1.35fr) minmax(210px, .95fr); padding: 12px; gap: 10px; }
+.v2 .kitchen-grid:has(.side-station) { grid-template-columns: minmax(145px, .7fr) minmax(275px, 1.3fr) minmax(205px, .95fr) minmax(180px, .83fr); }
+.v2 .station-heading { height: 38px; flex: 0 0 38px; }
+.v2 .station-heading strong { font-size: 12px; }
+.v2 .station-heading > span { font-size: 8px; }
+.v2 .ingredient-grid { grid-template-rows: none; grid-auto-rows: minmax(46px, 1fr); padding: 9px; gap: 7px; }
+.v2 .ingredient-button { min-height: 45px; padding-left: 41px; }
+.v2 .ingredient-art { left: 5px; transform: translateY(-50%) scale(.9); }
+.v2 .ingredient-button b { font-size: 10px; }
+.v2 .ingredient-button small { color: #9b8a70; font-size: 8px; }
+.v2 .ingredient-button.is-next { border: 2px solid #7b9b51; background: #f2f7dc; }
+.restock-button { min-height: 42px; flex: 0 0 42px; margin: 0 8px 8px; display: flex; align-items: center; justify-content: center; gap: 7px; color: #5a6b3d; background: #e4eacf; border: 1px solid #b9c599; border-radius: 4px; font-size: 10px; font-weight: 700; }
+.v2 .prep-counter { min-height: 150px; }
+.v2 .burger-stage .burger-visual { transform: scale(.82); }
+.v2 .plate { bottom: 10%; width: 80%; max-width: 290px; height: 40px; }
+.game-notice { position: absolute; z-index: 4; top: 8px; left: 9px; right: 9px; padding: 6px 8px; color: #5e645d; background: #fdfbf0d9; border: 1px solid #a6a69a; border-radius: 4px; font-size: 9px; line-height: 1.6; }
+.game-notice.tone-good { color: #376434; border-color: #83a66d; background: #eaf3dcf0; }
+.game-notice.tone-bad { color: #a13c2a; border-color: #d7a086; background: #ffebdcf0; }
+.recipe-guide { padding: 8px 9px; min-height: 65px; background: #fff9ed; border-bottom: 1px solid #d2c5ae; }
+.recipe-guide > span { display: block; margin-bottom: 5px; font-size: 8px; color: #8a7863; }
+.recipe-guide > div { display: flex; flex-wrap: wrap; gap: 4px; }
+.recipe-guide > div > span { display: inline-flex; align-items: center; gap: 2px; padding: 3px 4px; color: #9d8f7e; background: #ede8dd; border: 1px solid #d9cfbe; border-radius: 3px; font-size: 8px; }
+.recipe-guide > div > span.done { color: #4d713a; border-color: #a4bc87; background: #edf2db; }
+.recipe-guide > div > span.wrong { color: #ad3628; border-color: #d78f73; }
+.recipe-guide > div > span.current { color: #b3422b; border: 1px solid #bf694a; background: #fff1d5; }
+.recipe-guide small { font-size: 7px; }
+.v2 .assembly-actions { height: 56px; flex: 0 0 56px; grid-template-columns: .65fr .65fr 1.2fr; }
+.v2 .assembly-actions .serve-button { font-size: 12px; }
+.equipment-station { display: flex; flex-direction: column; }
+.raw-buttons { min-height: 55px; display: flex; gap: 5px; padding: 7px; background: #eee4d4; }
+.raw-buttons > button { position: relative; flex: 1; min-height: 40px; padding: 3px 3px 3px 35px; display: flex; flex-direction: column; justify-content: center; background: #fffaf0; border: 1px solid #d4c2a7; border-bottom: 3px solid #bfac90; border-radius: 4px; text-align: left; }
+.raw-buttons b { font-size: 10px; }
+.raw-buttons small { font-size: 8px; color: #96795d; }
+.v2 .raw-buttons .ingredient-art { transform: translateY(-50%) scale(.75); left: 1px; }
+.v2 .grill-deck { min-height: 100px; max-height: 265px; grid-template-rows: none; grid-auto-rows: minmax(40px, 1fr); padding: 7px; border-width: 5px; gap: 7px; }
+.v2 .grill-slot { min-height: 40px; grid-template-columns: 43px 1fr; }
+.v2 .grill-slot b { font-size: 10px; }
+.holding { padding: 9px 8px; background: #f6e9ca; }
+.holding > span { font-size: 10px; font-weight: 800; }
+.holding small { color: #94734a; font-size: 8px; font-weight: 400; display: block; margin: 3px 0 7px; }
+.holding > div { display: flex; gap: 5px; }
+.holding button { flex: 1; min-height: 34px; display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 9px; border: 1px solid #c8a66d; border-radius: 4px; background: #fffbec; }
+.holding button svg { color: #c8812a; }
+.holding button b { color: #a7402b; }
+.clean-control { min-height: 50px; display: flex; gap: 7px; align-items: center; padding: 8px; margin-top: auto; border-top: 1px solid #d4c5af; }
+.clean-control > span { flex: 1; font-size: 9px; color: #89725b; }
+.clean-control .meter { margin-top: 5px; height: 5px; }
+.clean-control button { display: flex; gap: 4px; align-items: center; padding: 8px; border: 1px solid #b1c6b3; background: #e1ede1; font-size: 10px; border-radius: 4px; }
+.cleaning-cover { position: absolute; z-index: 5; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; background: #ebf4ece8; color: #3e7856; font-size: 13px; }
+.side-station { display: flex; flex-direction: column; }
+.side-machines { display: flex; flex: 1; min-height: 0; flex-direction: column; }
+.drink-machine, .fries-machine { display: flex; flex: 1; flex-direction: column; padding: 9px; gap: 7px; min-height: 160px; }
+.drink-machine { background: #e9efdf; }
+.fries-machine { background: #f5e5cb; border-top: 1px solid #d7c3a5; }
+.machine-label { display: flex; align-items: center; justify-content: space-between; font-size: 9px; }
+.machine-label b { font-size: 8px; color: #938268; }
+.cup-area { flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.drink-cup { position: relative; width: 46px; height: 70px; overflow: hidden; background: #ffffff55; border: 3px solid #99aa9d; border-top: 0; border-radius: 2px 2px 12px 12px; }
+.cup-target { position: absolute; z-index: 3; bottom: 78%; left: 0; right: 0; height: 22%; background: #92ca6b55; border-top: 1px dashed #5b8f3b; border-bottom: 2px dashed #5b8f3b; }
+.cup-liquid { position: absolute; bottom: 0; left: 0; right: 0; background: #b04e21; transition: height .05s linear; border-top: 4px solid #dcb588; }
+.drink-cup > span { position: absolute; z-index: 4; left: 0; right: 0; top: 43%; text-align: center; color: #302b22; font-size: 11px; font-weight: 900; text-shadow: 0 0 4px #fff; }
+.cup-area > div + div { font-size: 10px; display: flex; flex-direction: column; gap: 5px; }
+.cup-area small { color: #8a8d72; font-size: 8px; }
+.cup-area .ready-text { color: #3c8539; }
+.pour-button, .fries-machine > button { min-height: 33px; width: 100%; border-radius: 4px; font-size: 10px; font-weight: 700; background: #425d3c; color: #fff8e9; box-shadow: inset 0 -3px 0 #0003; touch-action: none; }
+.pour-button.pouring { background: #ab4e27; }
+.fries-machine > button { background: #ad562d; }
+.fries-machine > button.ready-fry { background: #62833c; }
+.fries-machine > b { font-size: 9px; text-align: center; color: #936531; }
+.fries-art { position: relative; width: 53px; height: 64px; margin: auto; display: flex; gap: 3px; align-items: flex-end; justify-content: center; padding: 0 4px 20px; }
+.fries-art:after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 38px; background: #c9422c; border: 2px solid #982d20; border-radius: 3px 3px 12px 12px; }
+.fries-art > span { width: 7px; height: 44px; background: #f4c34d; border: 1px solid #cb8b26; transform: rotate(-8deg); }
+.fries-art > span:nth-child(2n) { transform: rotate(8deg); height: 49px; }
+.game-status { flex: 0 0 26px; min-height: 26px; padding: 0 16px; display: flex; align-items: center; gap: 14px; color: #98836f; font-size: 8px; }
+.game-status > span:nth-child(2) { margin-left: auto; display: flex; gap: 4px; align-items: center; max-width: 50%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.game-status > button { background: none; color: #896b4e; padding: 0; font-size: 8px; }
+.v2 .collection-sheet { max-width: 780px; padding: 24px; }
+.brief-description { color: #7f6a56; font-size: 12px; line-height: 1.9; }
+.brief-goals { display: flex; justify-content: space-between; padding: 13px; border: 1px solid #e0cbaa; background: #f6ead3; border-radius: 4px; font-size: 11px; color: #8b6d4b; }
+.brief-goals b { color: #a63e26; }
+.section-label { font-size: 12px; margin: 20px 0 9px; color: #6e5641; }
+.difficulty-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.difficulty-options > button { padding: 12px 7px; display: flex; flex-direction: column; align-items: center; gap: 5px; background: #f3ebdd; border: 1px solid #d9c5a8; border-radius: 5px; }
+.difficulty-options b { font-size: 12px; }
+.difficulty-options small { font-size: 9px; color: #9c8367; }
+.difficulty-options > button.selected { border: 2px solid #b64c2f; background: #fff0d0; padding: 11px 6px; }
+.perk-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 22px; }
+.perk-options > button { position: relative; min-height: 140px; padding: 12px 8px; display: flex; flex-direction: column; gap: 6px; align-items: center; background: #eee9db; border: 1px solid #cebea3; border-radius: 5px; text-align: center; }
+.perk-options > button.selected { background: #e8eed7; border: 2px solid #7d9752; padding: 11px 7px; }
+.perk-options > button > span { font-size: 28px; color: #977240; }
+.perk-options > button > b { font-size: 12px; }
+.perk-options > button > small { font-size: 9px; color: #577142; line-height: 1.5; }
+.perk-options > button > em { font-size: 8px; color: #a4896e; font-style: normal; margin-top: auto; }
+.perk-options > button > svg { position: absolute; right: 6px; top: 6px; color: #5f7f3a; }
+.inline-note { font-size: 10px; color: #9b856e; line-height: 1.8; }
+.v2 .pause-sheet .primary-button { margin-top: 20px; }
+.v2 .result-sheet > .stars { margin: 8px 0 14px; gap: 10px; }
+.v2 .result-sheet > .stars svg { width: 32px; height: 32px; }
+.result-reason { font-size: 11px; line-height: 1.7; color: #907455; margin: 0 0 18px; }
+.star-checklist { display: flex; flex-direction: column; gap: 9px; margin: 16px 0; text-align: left; font-size: 10px; color: #b39f82; }
+.star-checklist svg { width: 15px; height: 15px; }
+.star-checklist > span { display: flex; gap: 7px; align-items: center; }
+.star-checklist > span.earned { color: #788e40; }
+.account-status { display: flex; align-items: center; gap: 12px; padding: 14px; background: #f0e6d4; border-radius: 5px; }
+.account-status > svg { color: #af4b30; }
+.account-status > div { display: flex; flex-direction: column; gap: 4px; }
+.account-status b { font-size: 14px; }
+.account-status div span { color: #9b8265; font-size: 11px; overflow-wrap: anywhere; }
+.account-stars { margin-left: auto; display: flex; align-items: center; gap: 5px; color: #a77b2b; }
+.cloud-state { display: flex; align-items: center; gap: 7px; color: #8a755c; font-size: 11px; }
+.setup-pending { padding: 24px; margin: 14px 0; text-align: center; background: #edf0e5; border: 1px dashed #b4bea1; border-radius: 5px; }
+.setup-pending > svg { color: #889b6e; }
+.setup-pending h3 { font-size: 15px; }
+.setup-pending p { color: #879077; font-size: 11px; line-height: 1.9; margin-bottom: 0; }
+.auth-form { max-width: 420px; margin: 20px auto; }
+.auth-tabs { display: flex; gap: 5px; padding: 4px; background: #ede3d4; border-radius: 5px; }
+.auth-tabs button { flex: 1; padding: 10px; background: none; font-size: 12px; border-radius: 4px; }
+.auth-tabs button.active { color: #9b3f2b; background: #fff9e8; }
+.auth-form label { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; font-size: 11px; color: #846647; }
+.auth-form input { min-height: 44px; padding: 10px 12px; background: #fffcf4; border: 1px solid #c9b497; border-radius: 4px; color: #3a2c22; font: inherit; font-size: 13px; user-select: text; }
+.auth-message { padding: 10px; color: #b0502e; background: #f9e7d5; border-radius: 4px; font-size: 12px; line-height: 1.8; }
+.account-actions { display: flex; gap: 10px; margin: 18px 0; }
+.account-actions > button { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 12px; background: #eee2d1; border: 1px solid #cdb99c; border-radius: 4px; font-size: 11px; }
+.account-actions svg { width: 16px; }
+.backup-actions { border-top: 1px solid #dccdb5; padding-top: 14px; display: flex; align-items: center; gap: 12px; font-size: 10px; }
+.backup-actions button { display: flex; align-items: center; gap: 5px; padding: 8px 0; background: none; color: #8f7558; font-size: 11px; }
+.backup-actions span { color: #7c9653; }
+.import-save { display: block; margin-top: 10px; font-size: 10px; color: #8f7558; }
+.import-save input { display: block; margin-top: 7px; font: inherit; }
+.import-preview { margin-top: 12px; padding: 12px; background: #f4e1c6; border: 1px solid #d3ad77; font-size: 11px; line-height: 1.8; }
+.import-preview button { padding: 8px 12px; margin-right: 7px; background: #a0492f; color: #fff; border-radius: 4px; font-size: 10px; }
+.help-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.help-grid article { padding: 17px; background: #f2e9da; border: 1px solid #dbcbb3; border-radius: 4px; }
+.help-grid svg { width: 23px; color: #b14b2e; }
+.help-grid h3 { margin: 8px 0; font-size: 13px; }
+.help-grid p { margin: 0; font-size: 11px; line-height: 1.9; color: #8b735b; }
+.conflict-sheet > p { font-size: 12px; line-height: 1.8; color: #8c7253; }
+.conflict-sheet > div { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.conflict-sheet button { display: flex; flex-direction: column; gap: 8px; align-items: center; background: #f2e6d0; border: 1px solid #c8ad86; border-radius: 5px; padding: 20px; font-size: 11px; }
+.conflict-sheet button span { color: #947959; font-size: 10px; }
+@media(min-width: 1101px) and (max-height: 780px) {
+  .v2 .game-area { min-height: 570px; }
+  .v2 .prep-counter { min-height: 120px; }
+  .v2 .burger-stage .burger-visual { transform: scale(.67); }
+  .v2 .side-machines > div { min-height: 140px; }
+  .drink-cup { height: 58px; width: 40px; }
+  .fries-art { height: 47px; transform: scale(.8); transform-origin: bottom; }
+  .side-machines .pour-button, .fries-machine > button { min-height: 30px; }
+}
+@media(max-width: 1100px) and (min-width: 721px) {
+  .v2 .topbar { grid-template-columns: 180px 1fr auto; }
+  .v2 .kitchen-grid:has(.side-station) { grid-template-columns: 170px minmax(270px, 1.3fr) minmax(195px, 1fr); }
+  .v2 .game-area:has(.side-station) { min-height: 800px; }
+  .v2 .side-station { grid-column: 1/-1; min-height: 165px; }
+  .side-station .station-heading { display: none; }
+  .side-machines { flex-direction: row; }
+  .fries-machine { border-left: 1px solid #d7c3a5; border-top: 0; }
+  .campaign-layout { grid-template-columns: 1fr; }
+  .level-detail { display: none; }
+  .v2 .sound { display: none; }
+}
+@media(max-width: 720px) {
+  .v2 .topbar { height: calc(58px + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 9px 0; grid-template-columns: 1fr auto; gap: 8px; }
+  .header-location { display: none; }
+  .v2 .topbar-actions .icon-button:nth-of-type(n) { display: grid; width: 32px; height: 34px; }
+  .v2 .topbar-actions .sound { display: none !important; }
+  .player-button { padding: 0 8px; height: 34px; }
+  .player-button > span { max-width: 52px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-size: 9px; }
+  .player-button > svg:last-child:not(:first-child) { display: none; }
+  .lobby { padding: 22px 14px; }
+  .lobby-intro { min-height: 120px; padding: 0 0 20px; }
+  .lobby-intro h1 { font-size: 25px; }
+  .lobby-intro p:not(.eyebrow) { font-size: 10px; max-width: 200px; line-height: 1.8; }
+  .lobby-burger { width: 95px; height: 88px; flex: 0 0 95px; }
+  .lobby-burger .burger-visual { transform: scale(.4) rotate(-6deg); }
+  .lobby-burger > span { display: none; }
+  .lobby-intro .eyebrow { font-size: 8px; }
+  .lobby-summary { gap: 13px; flex-wrap: wrap; font-size: 9px; padding: 12px 0; }
+  .lobby-summary svg { width: 13px; }
+  .lobby-summary .sync-state { width: 100%; max-width: none; margin-left: 0; }
+  .campaign-layout { display: block; padding-top: 20px; }
+  .level-detail { display: none; }
+  .chapter-title { gap: 6px; }
+  .chapter-title h2 { font-size: 16px; }
+  .chapter-title > span { font-size: 8px; }
+  .chapter-title > small { font-size: 8px; }
+  .level-grid { grid-template-columns: repeat(2, 1fr); gap: 9px; }
+  .level-card { min-height: 126px; padding: 11px 13px; }
+  .level-card > strong { font-size: 13px; }
+  .level-number { font-size: 24px; }
+  .resume-banner { padding: 11px; }
+  .resume-banner > div > svg { display: none; }
+  .resume-banner b { font-size: 10px; }
+  .resume-banner span { font-size: 8px; }
+  .resume-banner button { font-size: 9px; padding: 10px; }
+  .v2 .game-area { height: auto; min-height: calc(100dvh - 58px); }
+  .shift-dashboard { min-height: 56px; padding: 8px 11px; gap: 16px; }
+  .shift-dashboard b { font-size: 18px; }
+  .shift-dashboard b small { font-size: 8px; }
+  .shift-dashboard > div > span { font-size: 8px; }
+  .shift-dashboard .stress-block { width: 76px; }
+  .stress-block > span b { font-size: 9px; }
+  .shift-dashboard .time-block { gap: 3px; }
+  .time-block > svg { display: none; }
+  .shift-dashboard .time-block b { font-size: 17px; }
+  .shift-dashboard > div:nth-child(3) { display: none !important; }
+  .v2 .order-rail { min-height: 92px; height: 92px; flex-basis: 92px; padding: 7px; }
+  .v2 .order-ticket { min-width: 212px; width: 212px; }
+  .v2 .kitchen-grid, .v2 .kitchen-grid:has(.side-station) { display: grid; flex: initial; min-height: 0; grid-template-columns: minmax(0, 1.25fr) minmax(130px, .8fr); padding: 7px; gap: 7px; }
+  .v2 .ingredient-station { position: static; z-index: 1; grid-column: 1/-1; grid-row: 1; height: auto; border: 1px solid #cfc2ae; border-radius: 5px; flex-direction: row; }
+  .v2 .ingredient-station .station-heading { display: none; }
+  .v2 .ingredient-grid { padding: 6px; height: 72px; flex: 1; overflow-x: auto; flex-direction: row; gap: 5px; }
+  .v2 .ingredient-button { width: 60px; min-width: 60px; min-height: 56px; height: 56px; padding: 33px 3px 3px; }
+  .v2 .ingredient-grid .ingredient-art { top: 19px; left: 50%; transform: translate(-50%, -50%) scale(.82); }
+  .v2 .ingredient-button b { font-size: 9px; }
+  .v2 .ingredient-button small { position: absolute; right: 2px; top: 1px; font-size: 7px; }
+  .v2 .restock-button { margin: 5px; padding: 7px 4px; width: 48px; flex: 0 0 48px; flex-direction: column; white-space: normal; font-size: 8px; line-height: 1.5; }
+  .v2 .assembly-station { grid-row: 2; grid-column: 1; min-height: 292px; }
+  .v2 .equipment-station { grid-row: 2; grid-column: 2; min-height: 292px; }
+  .v2 .station-heading { height: 31px; flex-basis: 31px; padding: 0 7px; }
+  .v2 .station-heading strong { font-size: 10px; }
+  .v2 .station-heading > span { font-size: 7px; }
+  .v2 .equipment-station .station-heading > span { display: none; }
+  .v2 .prep-counter { min-height: 150px; border-bottom-width: 4px; }
+  .v2 .burger-stage .burger-visual { transform: scale(.55); }
+  .v2 .plate { bottom: 6%; width: 85%; height: 27px; border-width: 4px; }
+  .v2 .recipe-guide { padding: 6px; min-height: 65px; }
+  .v2 .recipe-guide > span { font-size: 7px; }
+  .v2 .recipe-guide > div { gap: 3px; }
+  .v2 .recipe-guide > div > span { padding: 2px 3px; font-size: 7px; }
+  .v2 .assembly-actions { height: 46px; flex-basis: 46px; padding: 5px; gap: 4px; grid-template-columns: 32px 32px 1fr; }
+  .v2 .assembly-actions .serve-button { font-size: 10px; gap: 3px; }
+  .v2 .assembly-actions svg { width: 14px; }
+  .v2 .game-notice { padding: 5px; top: 5px; left: 5px; right: 5px; font-size: 7px; }
+  .raw-buttons { padding: 5px; gap: 4px; min-height: 47px; }
+  .raw-buttons > button { padding: 24px 2px 3px; text-align: center; align-items: center; min-height: 43px; }
+  .raw-buttons small { display: none; }
+  .v2 .raw-buttons .ingredient-art { left: 50%; top: 14px; transform: translate(-50%, -50%) scale(.7); }
+  .raw-buttons b { font-size: 8px; }
+  .v2 .grill-deck { min-height: 90px; padding: 4px; gap: 5px; border-width: 4px; }
+  .v2 .grill-slot { min-height: 36px; grid-template-columns: 33px 1fr; }
+  .v2 .grill-slot b { font-size: 7px; }
+  .v2 .grill-slot.is-empty { font-size: 8px; }
+  .v2 .grill-food { width: 28px; height: 20px; }
+  .holding { padding: 6px; }
+  .holding > span { font-size: 8px; }
+  .holding small { font-size: 7px; margin: 2px 0 4px; }
+  .holding > div { gap: 4px; }
+  .holding button { flex-wrap: wrap; gap: 1px; font-size: 8px; padding: 5px 2px; min-height: 33px; }
+  .holding button svg { display: none; }
+  .clean-control { padding: 5px; min-height: 38px; gap: 3px; }
+  .clean-control > span { font-size: 7px; }
+  .clean-control button { font-size: 8px; padding: 6px 4px; }
+  .clean-control button svg { width: 11px; }
+  .v2 .side-station { grid-column: 1/-1; grid-row: 3; min-height: 160px; }
+  .v2 .side-station .station-heading { display: none; }
+  .side-machines { flex-direction: row; }
+  .drink-machine, .fries-machine { min-height: 155px; padding: 8px; }
+  .fries-machine { border-top: 0; border-left: 1px solid #d7c3a5; }
+  .drink-cup { height: 60px; width: 42px; }
+  .fries-art { height: 50px; transform: scale(.8); transform-origin: bottom; }
+  .cup-area { min-height: 66px; }
+  .pour-button, .fries-machine > button { min-height: 36px; }
+  .game-status { padding: 5px 9px calc(5px + env(safe-area-inset-bottom)); min-height: 30px; font-size: 7px; }
+  .game-status > span:nth-child(2) { font-size: 7px; }
+  .v2 .collection-sheet { padding: 17px; }
+  .brief-description { font-size: 11px; }
+  .brief-goals { font-size: 9px; gap: 5px; padding: 10px 8px; }
+  .difficulty-options { gap: 5px; }
+  .difficulty-options small { font-size: 8px; line-height: 1.6; }
+  .perk-options { grid-template-columns: repeat(2, 1fr); gap: 7px; }
+  .perk-options > button { min-height: 128px; }
+  .help-grid { grid-template-columns: 1fr; }
+  .help-grid article { padding: 14px; }
+  .v2 .result-sheet { padding: 22px 18px; }
+  .v2 .result-sheet h2 { font-size: 21px; }
+  .backup-actions { flex-direction: column; align-items: flex-start; }
+}
